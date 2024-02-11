@@ -2,7 +2,7 @@ import React from 'react'
 
 const Achivements = () => {
     return (
-        <div className="pr-14 bg-yellow-500 max-md:pr-5">
+        <div id='achivements' className="pr-14 bg-yellow-500 max-md:pr-5">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
 
                 <div className="flex flex-col w-[71%] max-md:ml-0 max-md:w-full">

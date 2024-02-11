@@ -8,7 +8,7 @@ const Navbar = () => {
         event.preventDefault();
         const headerHeight = document.querySelector('header').offsetHeight;
         const targetSection = document.getElementById(sectionId);
-        const offset = targetSection.offsetTop - headerHeight + 80;
+        const offset = targetSection.offsetTop - headerHeight;
 
         window.scroll({ top: offset, behavior: "smooth" });
     }
@@ -22,12 +22,13 @@ const Navbar = () => {
                 <div className="md:ml-auto text-base flex flex-wrap items-center justify-center md:flex">
                     <Link href="/" className="mr-8 hover:text-yellow-500">Home</Link>
                     <Link href="#about" onClick={(event) => scrollToSection(event, 'about')} className="mr-8 hover:text-yellow-500">About Us</Link>
-                    <Link href="#" className="mr-8 hover:text-yellow-500">Services</Link>
-                    <Link href="#" className="mr-8 hover:text-yellow-500">Achivements</Link>
+                    <Link href="#services" onClick={(event) => scrollToSection(event, 'services')} className="mr-8 hover:text-yellow-500">Services</Link>
+                    <Link href="#achivements" onClick={(event) => scrollToSection(event, 'achivements')} className="mr-8 hover:text-yellow-500">Achivements</Link>
+                    <button className="inline-flex items-center bg-yellow-500 text-blue-950 border-0 py-2 px-6 focus:outline-none hover:text-black rounded text-base mt-4 md:mt-0">
+                        Contact us
+                    </button>
                 </div>
-                <button className="inline-flex items-center bg-yellow-500 text-blue-950 border-0 py-2 px-6 focus:outline-none hover:text-black rounded text-base mt-4 md:mt-0">
-                    Contact us
-                </button>
+
             </header>
 
         </div>
