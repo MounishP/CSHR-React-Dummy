@@ -3,28 +3,31 @@ import HeroSection from "@/components/Hero/HeroSection";
 import Achivements from "@/components/Achivements/Achivements";
 import Promotional from "@/components/promotional/Promotional";
 import Footer from "@/components/Footer/Footer";
-import { JobSection } from "@/components/JobSection/JobSection";
 import Testimonial from "@/components/Testinomial/Testinomial";
 import Navbar from "@/components/Navbar/Navbar";
 import Mission from "@/components/Mission/Mission";
-import Services from "@/components/ServicePage/Services";
+import Training from "@/components/Training/Training";
+import Services from "@/components/ServicesSection/Services";
+import { JobSection } from "@/components/JobSection/JobSection";
+
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+
       <main>
         <HeroSection />
         <About />
         <Mission />
         <Services />
+        <Training />
         <Achivements />
         <JobSection />
         <Promotional />
         <Testimonial />
-        {/* <TestimonialSection /> */}
         <Footer />
-      </main>
+      </main >
     </>
   );
 }

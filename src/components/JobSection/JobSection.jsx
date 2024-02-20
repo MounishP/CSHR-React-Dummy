@@ -14,19 +14,18 @@ export function JobSection() {
         slidesToShow: 4,
         swipeToSlide: true,
         slidesToScroll: 1,
-        // adaptiveHeight: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 700,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -57,24 +56,22 @@ export function JobSection() {
     ]
 
     return (
-        <section className="bg-yellow-100 flex items-center justify-center py-8">
-            <div className=" w-full mx-auto flex flex-col text-center content-center justify-center m-2 md:m-4 lg:m-8">
-                <h1 className="text-center text-blue-950 text-2xl font-bold sm:text-3xl pb-8">
+        <section id="jobs" className="bg-yellow-100 flex items-center justify-center py-4">
+            <div className=" w-full mx-auto flex flex-col text-center content-center justify-center m-2 md:m-4 lg:m-4">
+                <h1 className="text-center text-blue-950 text-2xl font-bold sm:text-3xl">
                     Jobs
                 </h1>
-                <section>
-                    <section className="max-w-[1200px] mx-auto w-full rounded-xl relative overflow-hidden">
+                <div className="px-14">
+                    <div className="lg:w-full mx-auto my-2">
                         <Slider {...settings}>
-                            {data.map(
-                                (job, index) => (
-                                    <div key={index} className="w-full m-1 p-1 flex lg:m-5 lg:p-5 ">
-                                        <Card job={job} index={index} />
-                                    </div>
-                                )
-                            )}
+                            {data.map((job, index) => (
+                                <div key={job._id.$oid} className="lg:m-2 lg:p-2 p-2 m-2">
+                                    <Card job={job} />
+                                </div>
+                            ))}
                         </Slider>
-                    </section>
-                </section>
+                    </div>
+                </div>
             </div>
         </section>
     );

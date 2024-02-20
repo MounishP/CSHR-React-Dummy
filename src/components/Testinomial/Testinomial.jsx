@@ -24,7 +24,7 @@ const Testimonial = () => {
     return (
         <CenterAligner>
             <h1 className="text-center text-blue-950 text-2xl font-bold sm:text-3xl pb-8">
-                Hear us from our clients
+                Hear us from our students
             </h1>
 
             <section className="max-w-[1100px] mx-auto w-full rounded-xl relative overflow-hidden">
@@ -50,11 +50,11 @@ const Testimonial = () => {
                                 </div>
 
                                 <div className="text-[16px] sm:text-[18px] space-y-3">
-                                    <div className="text-blue-950 text-[40px]">
+                                    <div className="text-blue-950 text-[25px] lg:text-[40px]">
                                         <FaQuoteLeft />
                                     </div>
                                     <p className="leading-[30px] font italic">{single.testimonial}</p>
-                                    <div className="text-blue-950 text-[40px]">
+                                    <div className="text-blue-950 text-[25px] lg:text-[40px]">
                                         <FaQuoteRight className="ml-auto" />
                                     </div>
                                 </div>
