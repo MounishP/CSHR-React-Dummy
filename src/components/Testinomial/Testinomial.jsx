@@ -7,6 +7,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 import { testimonials } from "@/data/TestData";
 import CenterAligner from "./CenterAligner";
+import { motion } from "framer-motion";
 
 const Testimonial = () => {
     const sliderRef = useRef();
@@ -23,18 +24,18 @@ const Testimonial = () => {
 
     return (
         <CenterAligner>
-            <h1 className="text-center text-blue-950 text-2xl font-bold sm:text-3xl pb-8">
+            <motion.h1 initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: 'easeInOut' }} className="text-center text-blue-950 text-2xl font-bold sm:text-3xl pb-8">
                 Hear us from our students
-            </h1>
+            </motion.h1>
 
             <section className="max-w-[1100px] mx-auto w-full rounded-xl relative overflow-hidden">
                 <Slider {...settings} ref={sliderRef}>
                     {testimonials.map((single, index) => (
-                        <div key={index} className="h-full">
+                        <motion.div key={index} initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: 'easeInOut' }} className="h-full">
                             <section className="mx-auto  p-5 sm:p-12 grid grid-cols-1 sm:grid-cols-[1fr_3fr] md:grid-cols-[1fr_4fr] items-center gap-5 md:gap-8 rounded-xl overflow-hidden">
 
                                 <div className="space-y-5 text-center">
-                                    <div className="border-8 inline-block rounded-full border-purple-200 p-2.5">
+                                    <div className="border-8 inline-block rounded-full border-yellow-500 p-2.5">
                                         <div className="mx-auto w-[100px] h-[100px] rounded-full bg-gray-200 overflow-hidden">
                                             <img
                                                 src={single.img}
@@ -59,7 +60,7 @@ const Testimonial = () => {
                                     </div>
                                 </div>
                             </section>
-                        </div>
+                        </motion.div>
                     ))}
                 </Slider>
 

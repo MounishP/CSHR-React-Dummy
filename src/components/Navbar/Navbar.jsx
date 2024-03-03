@@ -6,6 +6,7 @@ import logo from '../../../public/assets/logo.png'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { BsFacebook, BsTwitterX, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { useRouter } from 'next/navigation';
+import { easeInOut, motion } from "framer-motion";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -40,7 +41,6 @@ const Navbar = () => {
         router.push('https://twitter.com/home');
     };
 
-
     const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
@@ -70,23 +70,61 @@ const Navbar = () => {
         window.scroll({ top: offset, behavior: "smooth" });
     }
 
+    const containerVariants = {
+        hidden: {
+            opacity: 0
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.05
+            }
+        }
+    }
+
+    const itemVariants = {
+        hidden: {
+            y: -100
+        },
+        show: {
+            y: 0,
+            transition: {
+                duration: 1,
+                ease: easeInOut,
+                delay: .25
+            }
+        }
+    }
+
+
+
     return (
-        <nav className={`bg-white ${isScrolled ? 'show' : ''} text-yellow-500 shadow-lg body-font stickOntop`}>
-            <header className="flex justify-between items-center h-full w-full px-4 2xl-px-16">
+        <motion.nav variants={containerVariants} initial="hidden" animate="show" className={`bg-white ${isScrolled ? 'show' : ''} text-yellow-500 body-font stickOntop`}>
+            <motion.header variants={itemVariants} className="flex justify-between items-center h-full w-full px-4 2xl-px-16">
                 <Image src={logo} alt="logo" height={75} className='cursor-pointer' />
                 <div className='hidden md:flex'>
-                    <ul className="hidden md:flex">
-                        <Link href="/" className="ml-3 px-3 py-2 uppercase md:text-base text-base">Home</Link>
-                        <Link href="#about" onClick={(event) => scrollToSection(event, 'about')} className="ml-3 px-3 py-2 uppercase md:text-base text-base">About Us</Link>
-
-                        <Link href="#services" onClick={(event) => scrollToSection(event, 'services')} className="ml-3 px-3 py-2 uppercase md:text-base text-base">Services</Link>
-
-                        <Link href="#training" onClick={(event) => scrollToSection(event, 'training')} className="ml-3 px-3 py-2 uppercase md:text-base text-base">Training</Link>
-                        <Link href="#achivements" onClick={(event) => scrollToSection(event, 'achivements')} className="ml-3 px-3 py-2 uppercase md:text-base text-base">Achivements</Link>
-                        <Link href="#jobs" onClick={(event) => scrollToSection(event, 'jobs')} className="ml-3 px-3 py-2 uppercase md:text-lg text-base">Jobs</Link>
-                        <button className="ml-10 px-6 py-3 uppercase md:text-base md:px-4 md:py-2 text-base bg-yellow-500  text-blue-950 rounded-xl cursor-pointer">
+                    <ul className="hidden md:flex md:justify-center md:items-center" >
+                        <li >
+                            <a href="#hero" onClick={(event) => scrollToSection(event, 'hero')} className="ml-3 px-3 py-2 uppercase text-base">Home</a>
+                        </li>
+                        <li >
+                            <a href="#about" onClick={(event) => scrollToSection(event, 'about')} className="ml-3 px-3 py-2 uppercase text-base">About Us</a>
+                        </li >
+                        <li >
+                            <a href="#services" onClick={(event) => scrollToSection(event, 'services')} className="ml-3 px-3 py-2 uppercase text-base">Services</a>
+                        </li >
+                        <li >
+                            <a href="#training" onClick={(event) => scrollToSection(event, 'training')} className="ml-3 px-3 py-2 uppercase text-base">Training</a>
+                        </li>
+                        <li >
+                            <a href="#achivements" onClick={(event) => scrollToSection(event, 'achivements')} className="ml-3 px-3 py-2 uppercase text-base">Achivements</a>
+                        </li>
+                        <li >
+                            <a href="#jobs" onClick={(event) => scrollToSection(event, 'jobs')} className="ml-3 px-3 py-2 uppercase text-base">Jobs</a>
+                        </li>
+                        <a href="#contact" onClick={(event) => scrollToSection(event, 'contact')} className="ml-10 px-6 py-3 uppercase md:px-4 md:py-2 text-base bg-yellow-500  text-blue-950 rounded-xl cursor-pointer">
                             Contact us
-                        </button>
+                        </a>
                     </ul>
                 </div>
 
@@ -94,9 +132,9 @@ const Navbar = () => {
                     <AiOutlineMenu size={25} />
                 </div>
 
-            </header>
+            </motion.header >
 
-            <div className={
+            <motion.div variants={itemVariants} initial="hidden" animate="show" className={
                 menuOpen ? 'fixed left-0 top-0 w-[75%] md:hidden p-10 ease-in duration-500 h-screen bg-black/90 z-10' : 'fixed left-[-100%] top-0 p-10 h-screen z-10 ease-in duration-500'
             }>
                 <div className='flex w-full items-center justify-end'>
@@ -121,7 +159,7 @@ const Navbar = () => {
                         <Link href=''>
                             <li onClick={(event) => { closeMenu(); scrollToSection(event, 'training'); }} className='py-3 cursor-pointer'>Training</li>
                         </Link>
-                        <button type="button" onClick={(event) => { closeMenu(); }} className='bg-white text-blue-950 px-6 py-3 rounded-xl  cursor-pointer hover:bg-white/75'>Contact Us</button>
+                        <a type="button" onClick={(event) => { closeMenu(); scrollToSection(event, 'contact'); }} className='bg-white text-blue-950 px-6 py-3 rounded-xl  cursor-pointer hover:bg-white/75'>Contact Us</a>
                     </ul>
                 </div>
                 <div className='my-4 flex flex-col flex-wrap content-center items-center gap-2 text-white'>
@@ -137,8 +175,8 @@ const Navbar = () => {
                 <div className='my-3 p-3 flex flex-col flex-wrap content-center items-center'>
                     <Image src={logo} alt="logo" height="100" className='cursor-pointer flex flex-wrap content-center items-center' />
                 </div>
-            </div>
-        </nav>
+            </motion.div>
+        </motion.nav >
 
     )
 }
