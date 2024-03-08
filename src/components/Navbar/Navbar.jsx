@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '../../../public/assets/logo.png'
+import logo from '../../../public/logo.png'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { BsFacebook, BsTwitterX, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { useRouter } from 'next/navigation';
@@ -22,25 +22,25 @@ const Navbar = () => {
     const router = useRouter();
 
     const handleRedirectToWhatsapp = () => {
-        router.push('https://wa.me/123456789?text="Hey there! Could you share more exciting details about CareerSchool?"');
+        router.push('https://wa.me/message/44J2WCWQDJ2UJ1?text="Hey there!"');
     };
 
     const handleRedirectToLinkedin = () => {
-        router.push('https://www.linkedin.com/');
+        router.push('https://www.linkedin.com/company/35934924/');
     };
 
     const handleRedirectToInstagram = () => {
-        router.push('https://www.instagram.com/');
+        router.push('https://www.instagram.com/careerschoolhrsolutions?utm_source=qr&igsh=ZDJzajBxbTViZTMy');
     };
 
     const handleRedirectToFacebook = () => {
-        router.push('https://www.facebook.com');
+        router.push('https://www.facebook.com/careerschoolhrsolutions.homepage');
     };
 
     const handleRedirectToTwitterX = () => {
-        router.push('https://twitter.com/home');
+        router.push('https://x.com/careerschoolhr?s=20');
     };
-
+    
     const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
