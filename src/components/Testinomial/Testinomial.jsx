@@ -25,7 +25,7 @@ const Testimonial = () => {
     return (
         <CenterAligner>
             <motion.h1 initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: 'easeInOut' }} className="text-center text-blue-950 text-2xl font-bold sm:text-3xl pb-8">
-                Hear us from our students
+                Hear from our students
             </motion.h1>
 
             <section className="max-w-[1100px] mx-auto w-full rounded-xl relative overflow-hidden">
