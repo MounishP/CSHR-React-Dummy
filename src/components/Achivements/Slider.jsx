@@ -49,7 +49,7 @@ function Slider() {
     };
 
     return (
-        <div className='max-w-[500px] h-[500px] w-full m-auto py-8 px-4 relative group'>
+        <div className='max-w-[500px] h-[500px] w-full m-auto p-4 relative group'>
             <div
                 className='w-full h-full rounded-2xl bg-center bg-contain duration-500'
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}

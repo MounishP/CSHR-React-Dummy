@@ -15,6 +15,9 @@ function Slider() {
         },
         {
             url: './assets/AboutImages/group3.jpg'
+        },
+        {
+            url: './assets/AboutImages/group4.jpg'
         }
     ];
 
