@@ -101,7 +101,8 @@ const Navbar = () => {
     return (
         <motion.nav variants={containerVariants} initial="hidden" animate="show" className={`bg-white ${isScrolled ? 'show' : ''} text-yellow-500 body-font stickOntop`}>
             <motion.header variants={itemVariants} className="flex justify-between items-center h-full w-full px-4 2xl-px-16">
-                <Image src={logo} alt="logo" height={75} className='cursor-pointer' />
+                {/* <Image src={logo} alt="logo" height={75} className='cursor-pointer' /> */}
+                <img src='./assets/logo.png' alt="logo" className='h-[75px] cursor-pointer'/>
                 <div className='hidden md:flex'>
                     <ul className="hidden md:flex md:justify-center md:items-center" >
                         <li >
@@ -173,7 +174,8 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='my-3 p-3 flex flex-col flex-wrap content-center items-center'>
-                    <Image src={logo} alt="logo" height="100" className='cursor-pointer flex flex-wrap content-center items-center' />
+                    {/* <Image src={logo} alt="logo" height="100" className='cursor-pointer flex flex-wrap content-center items-center' /> */}
+                    <img src='./assets/logo.png' alt="logo" className='h-[75px] cursor-pointer'/>
                 </div>
             </motion.div>
         </motion.nav >
