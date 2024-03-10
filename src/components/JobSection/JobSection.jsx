@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Slider from "react-slick";
+import { jobs } from "@/data/JobsData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "./Card"; // Make sure to import or define Card
@@ -9,32 +10,32 @@ import { motion } from "framer-motion";
 import axios from "axios";
 
 export function JobSection() {
-    const [jobs, setJobs] = useState([]);
+    // const [jobs, setJobs] = useState([]);
 
-    async function getJobs() {
-        const url = "http://cshr.us-east-1.elasticbeanstalk.com/api/jobs";
-        const res = await fetch(url, { cache: 'no-cache' });
-        if (!res.ok) {
-            throw new Error('Failed to fetch data');
-        }
-        const data = await res.json();
-        console.log("data", data);
+    // async function getJobs() {
+    //     const url = "http://cshr.us-east-1.elasticbeanstalk.com/api/jobs";
+    //     const res = await fetch(url, { cache: 'no-cache' });
+    //     if (!res.ok) {
+    //         throw new Error('Failed to fetch data');
+    //     }
+    //     const data = await res.json();
+    //     console.log("data", data);
 
-        return data;
-    }
+    //     return data;
+    // }
 
-    useEffect(() => {
-        const fetchJobs = async () => {
-            try {
-                const data = await getJobs();
-                setJobs(data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchJobs = async () => {
+    //         try {
+    //             const data = await getJobs();
+    //             setJobs(data);
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     };
 
-        fetchJobs();
-    }, []);
+    //     fetchJobs();
+    // }, []);
 
     const SamplePrevArrow = (props) => {
         const { className, style, onClick } = props;
@@ -100,21 +101,22 @@ export function JobSection() {
                     <div className="px-14">
                         <div className="lg:w-full mx-auto my-2">
 
-                            {jobs.length === 0 ? (
-                                <p className="text-center text-gray-500">No Jobs Available for now</p>
-                            ) : null}
+                            {
+                                jobs.length === 0 ? (
+                                    <p className="text-center text-gray-500">No Jobs Available for now</p>
+                                ) :
 
-                            <Slider {...settings}>
-                                {jobs.map((job, index) => (
-                                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{
-                                        duration: 0.5, delay: 0.1
-                                    }}
-                                        key={index} className="lg:m-2 lg:p-2 p-2 m-2" >
-                                        <Card job={job} />
-                                    </motion.div>
-                                ))}
-                            </Slider>
-
+                                    <Slider {...settings}>
+                                        {jobs.map((job, index) => (
+                                            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{
+                                                duration: 0.5, delay: 0.1
+                                            }}
+                                                key={index} className="lg:m-2 lg:p-2 p-2 m-2" >
+                                                <Card job={job} />
+                                            </motion.div>
+                                        ))}
+                                    </Slider>
+                            }
                         </div>
                     </div>
                 </div>
