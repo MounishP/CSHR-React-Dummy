@@ -10,9 +10,6 @@ function Slider() {
             url: './assets/AboutImages/group1.jpg'
         },
         {
-            url: './assets/AboutImages/group4.jpg'
-        },
-        {
             url: './assets/AboutImages/group2.jpg'
 
         },

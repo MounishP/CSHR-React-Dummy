@@ -10,14 +10,6 @@ function Slider() {
             url: './assets/achivementImages/award1.jpg'
         },
         {
-            url: './assets/achivementImages/award2.jpg'
-
-        },
-        {
-            url: './assets/achivementImages/award3.jpg'
-
-        },
-        {
             url: './assets/achivementImages/award4.jpg'
 
         },
