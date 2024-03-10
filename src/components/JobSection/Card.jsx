@@ -12,7 +12,7 @@ export default function Card({ job }) {
                     <span className="inline-block bg-gray-200 rounded-full m-2 px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{job.location}</span>
                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">{job.experience}</span>
                 </div>
-                <button type="button" className='fixed bottom-10 mx-auto bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded'>Apply</button>
+                <button type="button" className='fixed bottom-10 mx-auto bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 rounded'><a href="https://forms.gle/urHu7LBUyFpv25Xj8">Apply</a></button>
             </div>
         </div>
     )
