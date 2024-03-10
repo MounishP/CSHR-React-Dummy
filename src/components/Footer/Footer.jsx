@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
             <div className=" p-3 bg-yellow-500 mx-auto">
                 <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .5, ease: 'easeInOut' }} className="text-center text-blue-950 text-sm md:text-xs sm:text-xs">
-                    © 2024 Carrers School. All rights reserved.
+                    © 2024 Career School. All rights reserved.
                 </motion.p>
             </div>
         </footer>
