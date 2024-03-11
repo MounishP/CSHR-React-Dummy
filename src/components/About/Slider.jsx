@@ -7,7 +7,7 @@ function Slider() {
     // about slider
     const slides = [
         {
-            url: './assets/AboutImages/group4.jpg'
+            url: './assets/AboutImages/group4.png'
         },
         {
             url: './assets/AboutImages/group1.jpg'
