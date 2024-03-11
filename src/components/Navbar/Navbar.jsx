@@ -118,7 +118,7 @@ const Navbar = () => {
                             <a href="#training" onClick={(event) => scrollToSection(event, 'training')} className="ml-3 px-3 py-2 uppercase text-base">Training</a>
                         </li>
                         <li >
-                            <a href="#achivements" onClick={(event) => scrollToSection(event, 'achivements')} className="ml-3 px-3 py-2 uppercase text-base">Achivements</a>
+                            <a href="#achivements" onClick={(event) => scrollToSection(event, 'achivements')} className="ml-3 px-3 py-2 uppercase text-base">Achievements</a>
                         </li>
                         <li >
                             <a href="#jobs" onClick={(event) => scrollToSection(event, 'jobs')} className="ml-3 px-3 py-2 uppercase text-base">Jobs</a>
