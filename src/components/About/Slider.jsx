@@ -7,6 +7,9 @@ function Slider() {
     // about slider
     const slides = [
         {
+            url: './assets/AboutImages/group4.jpg'
+        },
+        {
             url: './assets/AboutImages/group1.jpg'
         },
         {
@@ -15,6 +18,12 @@ function Slider() {
         },
         {
             url: './assets/AboutImages/group3.jpg'
+        },
+        {
+            url: './assets/AboutImages/group5.jpeg'
+        },
+        {
+            url: './assets/AboutImages/group6.jpeg'
         }
     ];
 
