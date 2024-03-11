@@ -25,4 +25,11 @@ export const jobs = [{
     "experience": "Freshers",
     "salary": "Up to 2LPA"
 },
+{
+    "id": 5,
+    "location": "Thoraipakkam",
+    "role": "Voice Process Executive - Hindi / Malayalam",
+    "experience": "Freshers",
+    "salary": "Up to 4 LPA"
+},
 ]
