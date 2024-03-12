@@ -39,4 +39,11 @@ export const jobs = [{
     "experience": "Min 1 Year Exp as Team Lead",
     "salary": "Up to 3 LPA"
 },
+{
+    "id": 7,
+    "location": "Mysuru",
+    "role": "QA - BPO Kannada",
+    "experience": "Min 1 Year Exp as Quality Analyst",
+    "salary": "Up to 3 LPA"
+},
 ]
