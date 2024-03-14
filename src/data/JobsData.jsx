@@ -151,4 +151,11 @@ export const jobs = [{
     "experience": "7+ years",
     "salary": "21 LPA"
 },
+{
+    "id": 23,
+    "location": "Perungalathur Chennai",
+    "role": "Hindi Customer Support",
+    "experience": "Freshers",
+    "salary": "Up to 20k CTC"
+},
 ]
