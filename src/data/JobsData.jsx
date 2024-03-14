@@ -144,4 +144,11 @@ export const jobs = [{
     "experience": "Minimum 1 Year experience as Process Trainer in BPO",
     "salary": "Upto 3.5 LPA"
 },
+{
+    "id": 22,
+    "location": "Pan India",
+    "role": "Senior Power Apps Developer",
+    "experience": "7+ years",
+    "salary": "21 LPA"
+},
 ]
