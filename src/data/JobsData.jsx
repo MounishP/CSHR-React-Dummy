@@ -13,9 +13,9 @@ export const jobs = [{
 },
 {
     "id": 3,
-    "location": "Ambattur Chennai",
-    "role": "Semi Voice Process",
-    "experience": "Minimum 1 Year",
+    "location": "Ekkathuthangal",
+    "role": "International Semi Voice Process",
+    "experience": "Freshers",
     "salary": "Up to 2 LPA"
 },
 {
@@ -27,10 +27,10 @@ export const jobs = [{
 },
 {
     "id": 5,
-    "location": "Chennai",
-    "role": "Process Associate Sinhala / German",
+    "location": "Tidel Park",
+    "role": "Customer Support Executive",
     "experience": "Freshers",
-    "salary": "Up to 10 LPA"
+    "salary": "Up to 3 LPA"
 },
 {
     "id": 6,
@@ -55,17 +55,17 @@ export const jobs = [{
 },
 {
     "id": 9,
+    "location": "Ambattur Chennai",
+    "role": "Semi Voice Process",
+    "experience": "Minimum 1 Year",
+    "salary": "Up to 2 LPA"
+},
+{
+    "id": 10,
     "location": "Tidel Park Chennai",
     "role": "Tele Sales - Kannada / Malayalam / Telugu / Tamil",
     "experience": "Freshers",
     "salary": "Up to 19k CTC"
-},
-{
-    "id": 10,
-    "location": "Karapakkam Chennai",
-    "role": "Banking Customer Support - Hindi",
-    "experience": "Freshers / Experience",
-    "salary": "Up to 3 LPA"
 },
 {
     "id": 11,
@@ -157,5 +157,12 @@ export const jobs = [{
     "role": "Hindi Customer Support",
     "experience": "Freshers",
     "salary": "Up to 20k CTC"
+},
+{
+    "id": 24,
+    "location": "Chennai",
+    "role": "Process Associate Sinhala / German",
+    "experience": "Freshers",
+    "salary": "Up to 10 LPA"
 },
 ]
