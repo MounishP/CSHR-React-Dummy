@@ -9,7 +9,7 @@ import Mission from "@/components/Mission/Mission";
 import Training from "@/components/Training/Training";
 import Services from "@/components/ServicesSection/Services";
 import { JobSection } from "@/components/JobSection/JobSection";
-
+import DemoTest from "@/components/demoTest/DemoTest";
 
 export default function Home() {
   return (
@@ -22,12 +22,13 @@ export default function Home() {
         <Mission />
         <Services />
         <Training />
+        <DemoTest />
         <Achivements />
         <JobSection />
         <Promotional />
         <Testimonial />
         <Footer />
-      </main >
+      </main>
     </>
   );
 }
