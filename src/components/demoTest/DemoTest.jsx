@@ -5,7 +5,7 @@ function DemoTest() {
     <>
       <div id="test" className="m-4 text-center">
         <h1 className="text-4xl p-4 font-bold text-yellow-500 text-center">
-          Take a test
+          Take Test
         </h1>
       </div>
       <div className="p-2 flex flex-col sm:flex-row justify-center mb-10">
